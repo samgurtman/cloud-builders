@@ -22,5 +22,5 @@ EOF
     gcloud container clusters get-credentials --project="$project" --zone="$zone" "$cluster" || exit
 fi
 
-echo "Running: helm $@"
-helm "$@"
+echo "Running: kubectl $@"
+exec "$@"

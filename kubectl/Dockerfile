@@ -1,5 +1,5 @@
 FROM gcr.io/cloud-builders/gcloud
 
-COPY kubectl.bash /builder/kubectl.bash
+COPY with-cluster.bash /builder/with-cluster.bash
 
-ENTRYPOINT ["/builder/kubectl.bash"]
+ENTRYPOINT ["/builder/with-cluster.bash", "kubectl"]
